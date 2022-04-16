@@ -1,4 +1,4 @@
-# SeatTimer | By airi
+# SeatTimer | By airi 🌸
 A timer used to remind me to change sitting positions.
 [Can also be used for anything else that might need a timer]
 
