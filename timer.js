@@ -1,32 +1,42 @@
-//I try to either change positions or go up from my chair every hour
+/* I try to either change positions or go up from my chair every hour */
+
+//Elements + Audio
 var button = document.getElementById("button");
-var time = document.getElementById("time");
+var timeText = document.getElementById("time");
 var timerEndSound = new Audio('timerSound.mp3');
-//var time = 60 * 60;
-//var minutes = Math.floor(time / 60);
-//var seconds = time % 60;
-// var setTime = hour / 60 + ":" + minutes / 60;
-var setTime = 60 * 60;
+
+//Choose the time you wish the timer to run for in SECONDS.
+var timeInSeconds = 10;
+
+var time = 1 * timeInSeconds;
+var seconds = time % 60;
+var minutes = Math.floor(time / 60);
+timeText.innerText = minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');;
 var timeout; 
 
 function timer() {
     if (button.innerHTML == "🌸") {
         startTimer();
-    } else {
+    } else if (button.innerHTML == "🌺") {
         pauseTimer();
+    } else {
+        startTimer();
     }
 }
 function startTimer() {
-    button.innerHTML = '⏸';
-    timeout = setTimeout(function() {   //  call a 3s setTimeout when the loop is called
-        setTime--;
-        time.innerText = setTime;                   //  increment the counter
-        if (setTime != 0) {           //  if the counter < 10, call the loop function
-            startTimer();          //  ..  again which will trigger another 
+    button.innerHTML = '🌺';
+    timeout = setTimeout(function() {
+        time--;
+        seconds = time % 60;
+        minutes = Math.floor(time / 60);
+        timeText.innerText = minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+        if (time != 0) {
+            startTimer();
         } else {
             stopTimer();
-        }                       //  ..  setTimeout()
-      }, 1000)
+        }
+    }, 1000)
+
 }
 
 function pauseTimer() {
@@ -36,8 +46,8 @@ function pauseTimer() {
 
 function stopTimer() {
     button.innerHTML = '🌸';
-    setTime = 60;
-    time.innerText = setTime
+    time = 1 * timeInSeconds;
+    timeText.innerText = "Yoo";
     timerEndSound.play();
     
 }

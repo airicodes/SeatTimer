@@ -1,6 +1,7 @@
 table {
     border: 3px solid black; 
     width: 230px; 
+    width: 8.5em;
     height: 20px;
     position: absolute;
     background-color: rgb(221, 189, 231);
@@ -11,8 +12,10 @@ table, p:nth-child(1) {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
+    colspan: 2;
     font-size: 2em;
     margin-top: 0px;
+    margin-left: 10px;
     margin-bottom: -33px;
 }
 
@@ -24,7 +27,7 @@ table, p:nth-child(1) {
     white-space: nowrap;
     float: right;
     margin-top: -55px;
-    margin-left: 141px;
+    margin-left: 180px;
     top: 20px;
     cursor: pointer;
 }
