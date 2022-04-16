@@ -1,0 +1,36 @@
+table {
+    border: 3px solid black; 
+    width: 230px; 
+    height: 20px;
+    background-color: rgb(221, 189, 231);
+    white-space: nowrap;
+}
+
+table, p:nth-child(1) {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 2em;
+    white-space: nowrap;
+    margin-top: 0px;
+    margin-bottom: -33px;
+}
+
+#button {
+    color: black;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 2em;
+    white-space: nowrap;
+    margin-top: 0px;
+    float: right;
+    margin-top: -51px;
+    margin-left: 141px;
+    margin-bottom: -0px;
+    top: 20px;
+}
+
+#together {
+    float: left;
+}
